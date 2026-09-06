@@ -1,9 +1,6 @@
 ---
 title: 齐泽克的敌对和跨性 / 别肯定的拉康精神分析之未来
 ---
-
-# 齐泽克的敌对和跨性 / 别肯定的拉康精神分析之未来
-
 **Coffman, Chris. “Žižek’s Antagonism and the Futures of Trans-Affirmative Lacanian Psychoanalysis.” *TSQ: Transgender Studies Quarterly*, vol. 4, no. 3–4, Nov. 2017, pp. 472–96. Silverchair, https://doi.org/10.1215/23289252-4189929.**
 
 ***

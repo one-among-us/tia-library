@@ -1,8 +1,6 @@
 ---
 title: 死亡政治学
 ---
-# 死亡政治学
-
 **Mbembe, Achille. _Necropolitics_. Duke University Press, 2019.**
 
 ***

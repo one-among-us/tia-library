@@ -2,9 +2,9 @@ name: Next.js CI
 
 on:
   push:
-    branches: [ 'main', 'amber-jellyfish-nextjs-migration' ]
+    branches: ['main', 'refactor/fumadocs']
   pull_request:
-    branches: [ 'main' ]
+    branches: ['main']
 
 jobs:
   build:
@@ -16,38 +16,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Convert document shortcodes to MDX (PowerShell)
-        shell: pwsh
-        run: |
-          pwsh ./scripts/convert-shortcodes.ps1 -source 'content.zh' -target 'content'
-
-      - name: Copy static assets to public
-        shell: pwsh
-        run: |
-          pwsh ./scripts/copy-static.ps1 -source 'static' -target 'public'
-
-      - name: Build contentlayer data
-        run: npm run content:build
-
-      - name: Generate search index
-        run: npm run generate:search
-
-      - name: Build Next.js
+      - name: Build
         run: npm run build
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: next-build
-          path: .next
-
-      - name: Upload search index
-        uses: actions/upload-artifact@v4
-        with:
-          name: search-index
-          path: public/search-index.json

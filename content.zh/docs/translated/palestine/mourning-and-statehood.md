@@ -1,9 +1,6 @@
 ---
 title: 论哀悼与建国：对约书亚·莱弗的回应
 ---
-
-# 论哀悼与建国：对约书亚·莱弗的回应
-
 **Winant, G. (2023). On Mourning and Statehood: A Response to Joshua Leifer. [online] Dissent Magazine. Available at: https://www.dissentmagazine.org/online_articles/a-response-to-joshua-leifer/ [Accessed 16 Oct. 2023].**
 
 ***

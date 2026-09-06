@@ -1,9 +1,6 @@
 ---
 title: 关于巴勒斯坦研究与酷儿理论的圆桌讨论
 ---
-
-# 关于巴勒斯坦研究与酷儿理论的圆桌讨论
-
 **Naber, Nadine, et al. “On Palestinian Studies and Queer Theory.” Journal of Palestine Studies, vol. 47, no. 3 (187), 2018, pp. 62–71.**
 
 ***

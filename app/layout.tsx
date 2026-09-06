@@ -1,9 +1,12 @@
-import '../styles/globals.scss';
-import Layout from '../components/Layout'
-import Sidebar from '../components/Sidebar'
+import { RootProvider } from 'fumadocs-ui/provider/next';
+import './global.css';
+import type { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Trans in Academia! Library',
+  title: {
+    default: 'Trans in Academia! Library',
+    template: '%s | Trans in Academia! Library',
+  },
   description: '跨儿学术小组资料库',
   icons: {
     icon: '/favicon.svg',
@@ -11,21 +14,17 @@ export const metadata = {
   },
 };
 
-// Runs before first paint. Only an explicit choice is stamped; with nothing stored the
-// prefers-color-scheme rules in globals.scss decide, with no JS involved.
-const themeInit =
-  "try{var d=document.documentElement,t=localStorage.getItem('tia-library-theme');if(t==='light'||t==='dark')d.dataset.theme=t;if(localStorage.getItem('tia-library-rail')==='collapsed')d.dataset.rail='collapsed'}catch(e){}"
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
-      </head>
-      <body>
-        {/* Sidebar is rendered here, in a server component, so its allDocs import never
-            crosses into the client bundle. Layout receives the finished element. */}
-        <Layout sidebar={<Sidebar />}>{children}</Layout>
+      <body className="flex min-h-screen flex-col">
+        <RootProvider
+          theme={{
+            defaultTheme: 'system',
+          }}
+        >
+          {children}
+        </RootProvider>
       </body>
     </html>
   );

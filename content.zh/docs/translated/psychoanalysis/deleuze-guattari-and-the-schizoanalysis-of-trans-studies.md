@@ -1,12 +1,7 @@
 ---
-date: 2023-11-15T23:18:00-05:00
 title: 德勒兹、加塔利以及跨儿研究的精神分裂分析
-type: docs
-comment: false
+date: "2023-11-15T23:18:00-05:00"
 ---
-
-# 德勒兹、加塔利以及跨儿研究的精神分裂分析
-
 **Ciara Cremin. (ed.) *Deleuze, Guattari and the Schizoanalysis of Trans Studies.* Bloomsbury Publishing, London, 2022.**
 
 ***

@@ -1,21 +1,14 @@
-# Generated files
+# Generated
+.next/
+.source/
+.contentlayer/
+content/
 /public/
-/resources/_gen/
-/assets/jsconfig.json
+node_modules/
+.env
+.env.local
 
-# IDE files
+# IDE / OS
 .idea/
 .vscode/
-
-# macOS files
 .DS_Store
-
-# Node / Next.js
-node_modules/
-.next/
-.contentlayer/
-.env
-
-# Generated content during migration
-public/content/
-content/

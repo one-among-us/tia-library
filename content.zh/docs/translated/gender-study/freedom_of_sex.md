@@ -1,9 +1,6 @@
 ---
 title: 性的自由：允许跨性别儿童改变身体的道德理由
 ---
-
-# 性的自由：允许跨性别儿童改变身体的道德理由
-
 **Chu, Andrea Long. “The Right to Change Sex.” Intelligencer, 11 Mar. 2024, https://nymag.com/intelligencer/article/trans-rights-biological-sex-gender-judith-butler.html.**
 
 ***

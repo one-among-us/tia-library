@@ -1,9 +1,6 @@
 ---
 title: 跨性别主体性与性差异逻辑
 ---
-
-# 跨性别主体性与性差异逻辑
-
 **Carlson, Shanna T. Transgender Subjectivity and the Logic of Sexual Difference. differences: A Journal of Feminist Cultural Studies (2010), 21(2), pp. 46–72. https://doi.org/10.1215/10407391-2010-003 .**
 
 ***

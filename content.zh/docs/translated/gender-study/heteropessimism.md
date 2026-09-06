@@ -1,9 +1,6 @@
 ---
 title: 论异性恋悲观主义
 ---
-
-# 论异性恋悲观主义
-
 **Seresin, Asa. “On Heteropessimism.” _The New Inquiry_, 9 Oct. 2019, https://thenewinquiry.com/on-heteropessimism/.**
 
 ***

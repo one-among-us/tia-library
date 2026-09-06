@@ -1,9 +1,7 @@
 ---
 title: 性别加速主义者宣言
+heading: 性别加速主义者宣言(Gender Accelerationist Manifesto)
 ---
-
-# 性别加速主义者宣言(Gender Accelerationist Manifesto)
-
 作者：Vikky Storm, Eme Flores<br />
 译者：云清
 ***

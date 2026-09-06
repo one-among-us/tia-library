@@ -1,9 +1,6 @@
 ---
 title: 酷儿理论与永恒的战争
 ---
-
-# 酷儿理论与永恒的战争
-
 ***
 作者：Maya Mikdashi；Jasbir K. Puar <br/>
 翻译：Zirui Wang
