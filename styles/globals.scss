@@ -39,7 +39,6 @@
   --code: #f5f0f5;
   --on-accent: #ffffff;
   --sheet-shadow: 0 18px 44px -18px rgb(45 38 48 / .3);
-  --theme-i: 0;
   color-scheme: light;
 
   /* chrome geometry and motion: theme-independent, declared once */
@@ -130,33 +129,22 @@ a:hover { color: var(--accent-hover); }
 .search-result mark { color: var(--accent); background: none; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
 .search-status { padding: .5rem 1rem; color: var(--muted); font-size: .9rem; }
 
-/* ---------- theme: two words, one rule ---------- */
-/* --w is the exact width of one choice: glyph .95em + gap .3em + two 1em CJK characters */
-.theme-toggle { --w: 3.25em; position: relative; display: inline-flex; flex: 0 0 auto; font-size: .95rem; }
-.theme-choice {
-  display: inline-flex; align-items: center; gap: .3em;
-  padding: .3rem 0; margin: 0; background: none; border: 0; border-radius: 0;
-  font: inherit; color: var(--muted); cursor: pointer;
-  transition: color 150ms var(--ease);
+/* ---------- theme: one button, sun or moon from html[data-theme] at first paint ---------- */
+.theme-toggle {
+  display: inline-grid; place-items: center; width: 2.5rem; height: 2.5rem; flex: 0 0 auto;
+  padding: 0; color: var(--text); background: none; border: 0; border-radius: 0; cursor: pointer;
 }
-.theme-choice svg { width: .95em; height: .95em; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
-.theme-choice + .theme-choice { margin-left: .75rem; }
-.theme-choice:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-/* the chosen word is lit from html[data-theme], so it is right at first paint */
-.theme-choice[data-value="light"] { color: var(--text); }
-:root[data-theme="dark"] .theme-choice[data-value="light"] { color: var(--muted); }
-:root[data-theme="dark"] .theme-choice[data-value="dark"] { color: var(--text); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.theme-toggle svg {
+  grid-area: 1 / 1; width: 18px; height: 18px;
+  fill: none; stroke: currentColor; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round;
+}
+.theme-icon-dark { display: none; }
+:root[data-theme="dark"] .theme-icon-light { display: none; }
+:root[data-theme="dark"] .theme-icon-dark { display: block; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) .theme-choice[data-value="light"] { color: var(--muted); }
-  :root:not([data-theme]) .theme-choice[data-value="dark"] { color: var(--text); }
-}
-:root .theme-toggle .theme-choice:hover { color: var(--text); }
-/* Sarasa's CJK advance is a fixed 1em, so both words are exactly --w wide and one
-   rule can slide between them. */
-.theme-toggle::after {
-  content: ""; position: absolute; left: 0; bottom: 0; width: var(--w); height: 2px; background: var(--accent);
-  transform: translateX(calc(var(--theme-i) * (var(--w) + .75rem)));
-  transition: transform var(--dur) var(--ease);
+  :root:not([data-theme]) .theme-icon-light { display: none; }
+  :root:not([data-theme]) .theme-icon-dark { display: block; }
 }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 250ms; animation-timing-function: var(--ease); }
 
@@ -306,7 +294,6 @@ img.emoji {
   --code: #28232d;
   --on-accent: #ffffff;
   --sheet-shadow: 0 18px 44px -18px rgb(0 0 0 / .75);
-  --theme-i: 1;
   color-scheme: dark;
 }
 :root[data-theme="dark"] .theme-logo-light { display: none; }
@@ -322,7 +309,6 @@ img.emoji {
     --code: #28232d;
     --on-accent: #ffffff;
     --sheet-shadow: 0 18px 44px -18px rgb(0 0 0 / .75);
-    --theme-i: 1;
     color-scheme: dark;
   }
 }
@@ -338,9 +324,6 @@ img.emoji {
   .site-tools { flex: 1 1 auto; gap: 1rem; }
   .search { flex: 1 1 auto; width: auto; min-width: 0; }
   .search-sheet { position: fixed; top: calc(var(--header-h) + .5rem); left: 1rem; right: 1rem; width: auto; }
-  .theme-toggle { --w: .95em; }
-  /* glyph only, but the word stays in the accessible name */
-  .theme-choice-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
   .mobile-nav-toggle {
     display: inline-grid; place-items: center; width: 2.5rem; height: 2.5rem; margin-right: -.5rem;
     padding: 0; color: var(--text); background: none; border: 0; border-radius: 0; cursor: pointer;
@@ -370,7 +353,6 @@ img.emoji {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .search-field::after, .search-sheet, .search-result-title, .toc a,
-  .theme-choice, .theme-toggle::after,
   .nav-link, .nav-text, .nav-toggle, .nav-toggle::before, .nav-toggle::after, .nav-group, .nav-group > ul, .nav-cursor,
   .mobile-nav-backdrop, .mobile-sidebar {
     transition: none !important; animation: none !important;
