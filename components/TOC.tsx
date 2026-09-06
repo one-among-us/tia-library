@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import { TwemojiText } from './Twemoji'
 
 type Item = { id: string; text: string }
 
@@ -63,7 +64,7 @@ export default function TOC({ items }: { items: Item[] }) {
       <ul>
         {items.map((it) => (
           <li key={it.id}>
-            <a href={`#${it.id}`} onClick={(e) => jump(e, it.id)} aria-current={current === it.id ? 'location' : undefined}>{it.text}</a>
+            <a href={`#${it.id}`} onClick={(e) => jump(e, it.id)} aria-current={current === it.id ? 'location' : undefined}><TwemojiText text={it.text} /></a>
           </li>
         ))}
       </ul>

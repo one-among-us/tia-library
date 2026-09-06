@@ -9,6 +9,7 @@ import ThemeToggle from './ThemeToggle'
 export default function Layout({ children, sidebar }: { children: React.ReactNode; sidebar: React.ReactNode }) {
   const pathname = usePathname()
   const [isMobileNavOpen, setMobileNavOpen] = useState(false)
+  const [railCollapsed, setRailCollapsed] = useState<boolean | null>(null)
   const toggleRef = useRef<HTMLButtonElement>(null)
   const drawerRef = useRef<HTMLElement>(null)
   const restoreFocus = useRef(false)
@@ -36,6 +37,19 @@ export default function Layout({ children, sidebar }: { children: React.ReactNod
     return () => document.removeEventListener('keydown', closeOnEscape)
   }, [isMobileNavOpen])
 
+  useEffect(() => {
+    setRailCollapsed(document.documentElement.dataset.rail === 'collapsed')
+  }, [])
+
+  const toggleRail = () => {
+    const next = !(railCollapsed ?? document.documentElement.dataset.rail === 'collapsed')
+    setRailCollapsed(next)
+    const root = document.documentElement
+    if (next) root.dataset.rail = 'collapsed'
+    else delete root.dataset.rail
+    try { localStorage.setItem('tia-library-rail', next ? 'collapsed' : 'open') } catch {}
+  }
+
   return (
     <div className="site-root">
       <header className="site-header">
@@ -47,6 +61,19 @@ export default function Layout({ children, sidebar }: { children: React.ReactNod
         <div className="site-tools">
           <Search />
           <ThemeToggle />
+          <button
+            className="rail-toggle"
+            type="button"
+            aria-expanded={railCollapsed !== true}
+            aria-controls="site-sidebar"
+            title={railCollapsed ? '展开目录' : '收起目录'}
+            onClick={toggleRail}
+          >
+            <span className="sr-only">{railCollapsed ? '展开' : '收起'}目录</span>
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M3 3.5h12v11H3zM8 3.5v11" stroke="currentColor" strokeWidth="1.25" />
+            </svg>
+          </button>
           <button
             ref={toggleRef}
             className="mobile-nav-toggle"
@@ -63,7 +90,7 @@ export default function Layout({ children, sidebar }: { children: React.ReactNod
         </div>
       </header>
       <div className="site-body">
-        <aside className="site-sidebar">{sidebar}</aside>
+        <aside id="site-sidebar" className="site-sidebar">{sidebar}</aside>
         <div className="site-main">{children}</div>
       </div>
       {isMobileNavOpen && (
