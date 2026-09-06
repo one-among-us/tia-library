@@ -245,6 +245,11 @@ a:hover { color: var(--accent-hover); }
 /* anchored headings land just under the sticky head, not behind it */
 .doc-content h2, .doc-content h3, .doc-content h4 { scroll-margin-top: calc(var(--header-h) + 1.25rem); }
 .doc-content img { display: block; max-width: 100%; height: auto; margin: 1.5rem auto; border-radius: .3rem; }
+img.emoji {
+  display: inline-block; width: 1.15em; height: 1.15em; object-fit: contain;
+  margin: 0 .05em; vertical-align: -.2em; border: 0; border-radius: 0;
+}
+.doc-content img.emoji { display: inline-block; max-width: 1.15em; height: 1.15em; margin: 0 .05em; border-radius: 0; }
 .doc-content pre { overflow-x: auto; padding: 1rem 1.25rem; background: var(--code); border: 1px solid var(--border); border-radius: .4rem; font-family: var(--font-mono); }
 .doc-content code { padding: .12em .3em; background: var(--code); border-radius: .2rem; font-family: var(--font-mono); font-size: .9em; }
 .doc-content pre code { padding: 0; background: none; }
@@ -261,6 +266,17 @@ a:hover { color: var(--accent-hover); }
 
 /* ---------- mobile chrome (hidden above 620px) ---------- */
 .mobile-nav-toggle, .mobile-sidebar, .mobile-nav-backdrop { display: none; }
+
+/* desktop rail collapse: the header button is the only way back in */
+.rail-toggle { display: none; }
+@media (min-width: 621px) {
+  .rail-toggle {
+    display: inline-grid; place-items: center; width: 2.5rem; height: 2.5rem; margin-right: -.5rem;
+    padding: 0; color: var(--text); background: none; border: 0; border-radius: 0; cursor: pointer;
+  }
+  .rail-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  :root[data-rail="collapsed"] .site-sidebar { display: none; }
+}
 
 /* ---------- landing ---------- */
 .landing { max-width: 800px; margin: 0 auto; padding: clamp(2rem, 8vw, 7rem) 0; }

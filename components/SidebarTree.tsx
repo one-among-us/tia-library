@@ -3,6 +3,7 @@
 import React, { useEffect, useId, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { TwemojiText } from './Twemoji'
 
 export type NavNode = { title: string; href: string; children: NavNode[] }
 
@@ -86,7 +87,7 @@ export default function SidebarTree({ tree }: { tree: NavNode[] }) {
               title={[...node.title].length > LONG ? node.title : undefined}
               style={{ '--depth': depth } as React.CSSProperties}
             >
-              <span className="nav-text">{node.title}</span>
+              <span className="nav-text"><TwemojiText text={node.title} /></span>
             </Link>
             {section && (
               <button

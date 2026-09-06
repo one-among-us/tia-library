@@ -14,7 +14,7 @@ export const metadata = {
 // Runs before first paint. Only an explicit choice is stamped; with nothing stored the
 // prefers-color-scheme rules in globals.scss decide, with no JS involved.
 const themeInit =
-  "try{var t=localStorage.getItem('tia-library-theme');if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t}}catch(e){}"
+  "try{var d=document.documentElement,t=localStorage.getItem('tia-library-theme');if(t==='light'||t==='dark')d.dataset.theme=t;if(localStorage.getItem('tia-library-rail')==='collapsed')d.dataset.rail='collapsed'}catch(e){}"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -4,6 +4,7 @@ import { allDocs } from 'contentlayer/generated'
 import DocRenderer, { headingsFromMarkdown, titleUnits } from '../../../../components/DocRenderer'
 import TOC from '../../../../components/TOC'
 import EditThisPageLink from '../../../../components/EditThisPageLink'
+import { TwemojiText } from '../../../../components/Twemoji'
 
 type Props = { params: { lang: string; slug: string[] } }
 
@@ -33,7 +34,7 @@ export default function DocPage({ params }: Props) {
   return (
     <main className="doc-page">
       <div className="doc-content">
-        <h1 style={{ '--title-w': titleUnits(heading) } as React.CSSProperties}>{heading}</h1>
+        <h1 style={{ '--title-w': titleUnits(heading) } as React.CSSProperties}><TwemojiText text={heading} /></h1>
         <DocRenderer code={doc.body.code} />
         <EditThisPageLink filePath={`content.zh/${doc._raw.sourceFilePath}`} />
       </div>

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import Fuse from 'fuse.js'
 import type { FuseResultMatch } from 'fuse.js'
+import { twemojifyText, TwemojiText } from './Twemoji'
 
 type Entry = { href: string; title: string; heading?: string; section: string; headings: string[]; excerpt: string }
 // [start, end) — Fuse reports an inclusive end, converted on the way in.
@@ -121,15 +122,15 @@ function hitOf(item: Entry, matches: readonly FuseResultMatch[], body?: string):
 }
 
 function Mark({ text, ranges }: { text: string; ranges: Range[] }) {
-  if (!ranges.length) return <>{text}</>
+  if (!ranges.length) return <>{twemojifyText(text)}</>
   const parts: React.ReactNode[] = []
   let pos = 0
   for (const [s, e] of ranges) {
-    if (s > pos) parts.push(text.slice(pos, s))
-    parts.push(<mark key={s}>{text.slice(s, e)}</mark>)
+    if (s > pos) parts.push(twemojifyText(text.slice(pos, s)))
+    parts.push(<mark key={s}>{twemojifyText(text.slice(s, e))}</mark>)
     pos = e
   }
-  if (pos < text.length) parts.push(text.slice(pos))
+  if (pos < text.length) parts.push(twemojifyText(text.slice(pos)))
   return <>{parts}</>
 }
 
@@ -301,7 +302,7 @@ export default function Search() {
                   go(h.entry.href)
                 }}
               >
-                {h.entry.section && <span className="search-result-section">{h.entry.section}</span>}
+                {h.entry.section && <span className="search-result-section"><TwemojiText text={h.entry.section} /></span>}
                 <span className="search-result-title"><Mark text={h.entry.title} ranges={h.titleRanges} /></span>
                 {h.snippet && <span className="search-result-snippet"><Mark text={h.snippet.text} ranges={h.snippet.ranges} /></span>}
               </Link>

@@ -5,6 +5,7 @@ import Katex from './Katex'
 import YouTubeEmbed from './YouTubeEmbed'
 import Figure from './Figure'
 import GistEmbed from './GistEmbed'
+import { twemojifyNode } from './Twemoji'
 
 const slugify = (value: string) => value.toLowerCase().trim().replace(/[^\p{L}\p{N}\s-]/gu, '').replace(/\s+/g, '-')
 const textOf = (node: React.ReactNode): string => {
@@ -14,9 +15,14 @@ const textOf = (node: React.ReactNode): string => {
   if (React.isValidElement(node)) return textOf((node.props as { children?: React.ReactNode }).children)
   return ''
 }
-const passthrough = (tag: keyof React.JSX.IntrinsicElements) => (props: any) => React.createElement(tag, props)
+const passthrough = (tag: keyof React.JSX.IntrinsicElements) =>
+  ({ children, ...props }: any) => React.createElement(tag, props, twemojifyNode(children))
+const raw = (tag: keyof React.JSX.IntrinsicElements) => (props: any) => React.createElement(tag, props)
+const heading = (tag: 'h1' | 'h2' | 'h3') =>
+  ({ children, ...props }: any) => React.createElement(tag, { id: slugify(textOf(children)), ...props }, twemojifyNode(children))
+const isExternal = (href?: string) => !!href && /^(https?:)?\/\//i.test(href)
 const components = {
-  h1: ({ children, ...props }: any) => <h1 id={slugify(textOf(children))} {...props}>{children}</h1>,
+  h1: heading('h1'),
   katex: ({ children }: any) => <Katex>{children}</Katex>,
   Katex: ({ children }: any) => <Katex>{children}</Katex>,
   youtube: ({ id }: any) => <YouTubeEmbed id={id} />,
@@ -25,14 +31,19 @@ const components = {
   Figure: ({ src, alt, caption }: any) => <Figure src={src} alt={alt} caption={caption} />,
   gist: ({ id }: any) => <GistEmbed id={id} />,
   GistEmbed: ({ id }: any) => <GistEmbed id={id} />,
-  h2: ({ children, ...props }: any) => <h2 id={slugify(textOf(children))} {...props}>{children}</h2>,
-  h3: ({ children, ...props }: any) => <h3 id={slugify(textOf(children))} {...props}>{children}</h3>,
+  h2: heading('h2'),
+  h3: heading('h3'),
   h4: passthrough('h4'), h5: passthrough('h5'), h6: passthrough('h6'),
-  ul: passthrough('ul'), ol: passthrough('ol'), li: passthrough('li'),
-  blockquote: passthrough('blockquote'), pre: passthrough('pre'), code: passthrough('code'),
-  img: passthrough('img'), table: passthrough('table'), thead: passthrough('thead'),
+  p: passthrough('p'), ul: passthrough('ul'), ol: passthrough('ol'), li: passthrough('li'),
+  a: ({ href, children, ...props }: any) => (
+    <a href={href} {...props} {...(isExternal(href) ? { target: '_blank', rel: 'noreferrer' } : {})}>
+      {twemojifyNode(children)}
+    </a>
+  ),
+  blockquote: passthrough('blockquote'), pre: raw('pre'), code: raw('code'),
+  img: raw('img'), table: passthrough('table'), thead: passthrough('thead'),
   tbody: passthrough('tbody'), tr: passthrough('tr'), td: passthrough('td'), th: passthrough('th'),
-  hr: passthrough('hr'), strong: passthrough('strong'), em: passthrough('em')
+  hr: raw('hr'), strong: passthrough('strong'), em: passthrough('em')
 }
 
 // Approximate rendered width of a title in em: CJK and fullwidth glyphs advance 1em in
