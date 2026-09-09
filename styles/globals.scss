@@ -112,6 +112,11 @@ a:hover { color: var(--accent-hover); }
 .search input::placeholder { color: var(--muted); opacity: 1; }
 .search input::-webkit-search-decoration, .search input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
 .search input:focus { outline: none; } /* the drawn rule is the focus indicator */
+/* Touch browsers zoom the page in to focus a field smaller than 16px and never zoom back
+   out. The last 0.8px is cheaper to give up than the zoom. */
+@media (pointer: coarse) {
+  .search input { font-size: 1rem; }
+}
 
 .search-sheet {
   position: absolute; top: calc(100% + .5rem); right: 0; z-index: 20;
