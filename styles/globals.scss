@@ -272,7 +272,7 @@ img.emoji {
 }
 
 /* ---------- landing ---------- */
-.landing { max-width: 800px; margin: 0 auto; padding: clamp(2rem, 8vw, 7rem) 0; }
+.landing { max-width: 800px; margin: 0 auto; padding: 0 0 clamp(2rem, 8vw, 7rem); }
 .landing-logo { display: block; width: clamp(7rem, 20vw, 10rem); height: auto; margin: 0 0 1rem; }
 .landing-logo.theme-logo-dark { display: none; }
 .eyebrow { margin: 0 0 .35rem; color: var(--accent); font-size: .85rem; font-weight: 700; letter-spacing: .01em; }
@@ -349,7 +349,7 @@ img.emoji {
     animation: drawer-in var(--dur) var(--ease);
   }
   .site-main { padding: 2rem 1.1rem 3rem; }
-  .landing { padding-block: 2rem; }
+  .landing { padding-block: 0 2rem; }
 }
 @keyframes fade-in { from { opacity: 0; } }
 @keyframes drawer-in { from { transform: translateX(-100%); } }
