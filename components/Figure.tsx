@@ -1,3 +1,5 @@
+import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
+
 export default function Figure({
   src,
   alt,
@@ -9,7 +11,9 @@ export default function Figure({
 }) {
   return (
     <figure>
-      <img src={src} alt={alt || caption || ''} />
+      <ImageZoom>
+        <img src={src} alt={alt || caption || ''} />
+      </ImageZoom>
       {caption ? <figcaption>{caption}</figcaption> : null}
     </figure>
   );

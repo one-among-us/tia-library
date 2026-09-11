@@ -14,9 +14,10 @@ export default function Home() {
         aria-hidden="true"
         className="mb-6 hidden h-auto w-36 dark:block md:w-40"
       />
-      <p className="text-fd-primary mb-2 text-sm font-semibold tracking-wide">
+
+      <h1 className="text-fd-muted-foreground mb-4 text-4xl font-bold tracking-tight text-balance md:text-5xl">
         Trans in Academia!
-      </p>
+      </h1>
       <h1 className="text-fd-foreground mb-4 text-4xl font-bold tracking-tight text-balance md:text-5xl">
         跨性别学术小组资料库
       </h1>
@@ -52,7 +53,7 @@ export default function Home() {
           ，并附上联系方式、作品出处和转载格式等信息。审核通过后，我们会尽快与您联系，并将作品上传至资料库的对应板块。
         </p>
         <p>
-          <Link href="/docs/about">了解更多关于我们</Link>
+          <Link href="/docs/about">关于我们</Link>
         </p>
       </section>
     </main>

@@ -1,4 +1,5 @@
 import { RootProvider } from 'fumadocs-ui/provider/next';
+import { translations } from '@/lib/layout.shared';
 import './global.css';
 import type { ReactNode } from 'react';
 
@@ -21,6 +22,10 @@ export default function Layout({ children }: { children: ReactNode }) {
         <RootProvider
           theme={{
             defaultTheme: 'system',
+          }}
+          i18n={{
+            locale: 'zh-CN',
+            translations,
           }}
         >
           {children}

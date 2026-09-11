@@ -15,6 +15,14 @@ const config = {
       { source: '/zh/docs/:path*', destination: '/docs/:path*', permanent: true },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: '/docs/:slug*.md',
+        destination: '/llms.mdx/docs/:slug*/content.md',
+      },
+    ];
+  },
 };
 
 export default withMDX(config);

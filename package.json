@@ -6,7 +6,7 @@
     "dev": "node ./scripts/copy-static.mjs && next dev",
     "build": "node ./scripts/copy-static.mjs && next build",
     "start": "next start",
-    "postinstall": "fumadocs-mdx"
+    "postinstall": "node ./scripts/patch-next-themes.mjs && fumadocs-mdx"
   },
   "dependencies": {
     "fumadocs-core": "16.15.7",
