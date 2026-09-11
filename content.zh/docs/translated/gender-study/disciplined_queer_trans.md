@@ -1,8 +1,6 @@
 ---
-title: 受到规训/得到学科化：现在关于酷儿研究的跨儿*是什么？
+title: "受到规训/得到学科化：现在关于酷儿研究的跨儿*是什么？"
 ---
-# 受到规训/得到学科化：现在关于酷儿研究的跨儿*是什么？
-
 **Keegan, C.M. (2018). Getting Disciplined: What’s Trans\* about Queer Studies Now? Journal of Homosexuality, 67(3), pp.1–14. [doi.org/10.1080/00918369.2018.1530885](http://doi.org/10.1080/00918369.2018.1530885).**
 
 ***

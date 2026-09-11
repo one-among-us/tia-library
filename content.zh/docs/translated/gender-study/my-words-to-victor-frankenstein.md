@@ -1,9 +1,6 @@
 ---
 title: 我在香蒙尼镇上方对维克多·弗兰肯斯坦所说的话：演绎跨性别愤怒
 ---
-
-# 我在香蒙尼镇上方对维克多·弗兰肯斯坦所说的话：演绎跨性别愤怒
-
 Stryker, Susan. “My Words to Victor Frankenstein Above the Village of Chamounix: Performing Transgender Rage.” *GLQ: A Journal of Lesbian and Gay Studies*, vol. 1, no. 3, June 1994, pp. 237–54. *Silverchair*, https://doi.org/10.1215/10642684-1-3-237.
 
 ***

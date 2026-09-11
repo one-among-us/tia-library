@@ -1,9 +1,6 @@
 ---
 title: 迷思：我的族人比你们的族人更早来到这里
 ---
-
-# 迷思：我的族人比你们的族人更早来到这里
-
 **Decolonize Palestine (2021). Myth: My people were here before your people | Decolonize Palestine. [online] decolonizepalestine.com. Available at: https://decolonizepalestine.com/myth/my-people-were-here-before-your-people/ [Accessed 22 Oct. 2023].**
 
 ***

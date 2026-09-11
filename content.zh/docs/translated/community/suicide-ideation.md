@@ -1,9 +1,6 @@
 ---
 title: 自杀意念：酷儿社群的领导者们，以及无论如何都要活下去
 ---
-
-# 自杀意念：酷儿社群的领导者们，以及无论如何都要活下去
-
 **Piepzna-Samarasinha, Leah Lakshmi. “Suicidal Ideation 2.0.” _Care Work: Dreaming Disability Justice_, Arsenal Pulp Press, 2018.**
 
 ***

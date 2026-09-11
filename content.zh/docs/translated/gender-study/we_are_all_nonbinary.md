@@ -1,9 +1,6 @@
 ---
 title: 我们都是非二元性/别：关于意外的简史
 ---
-
-# 我们都是非二元性/别：关于意外的简史
-
 **Amin, Kadji. “We Are All Nonbinary.” *Representations*, vol. 158, no. 1, May 2022, pp. 106–19. DOI.org (Crossref), https://doi.org/10.1525/rep.2022.158.11.106.**
 
 ***

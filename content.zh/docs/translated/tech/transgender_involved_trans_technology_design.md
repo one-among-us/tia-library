@@ -1,9 +1,6 @@
 ---
 title: 跨性别者及社群如何参与跨性别技术设计过程
 ---
-
-# 跨性别者及社群如何参与跨性别技术设计过程
-
 **Haimson, Oliver L., et al. “How Transgender People and Communities Were Involved in Trans Technology Design Processes.” Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems, ACM, 2023, pp. 1–16. DOI.org (Crossref), https://doi.org/10.1145/3544548.3580972.**
 
 ***

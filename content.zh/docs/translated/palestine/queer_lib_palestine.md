@@ -1,7 +1,6 @@
 ---
 title: （转载）一份来自巴勒斯坦酷儿的解放诉求
 ---
-
 ***
 
 作者：Queers in Palestine <br/>

@@ -1,9 +1,6 @@
 ---
 title: 性和性别的形而上学
 ---
-
-# 性和性别的形而上学
-
 **本文选自 Witt, C. (2011). _Feminist metaphysics : explorations in the ontology of sex, gender and identity_. Dordrecht ; London: Springer. 第四十七页到第六十五页**
 
 ***

@@ -1,8 +1,6 @@
 ---
 title: 对《卡斯评估》中有关为青少年性别焦虑提供性别肯定医疗服务的循证批判
 ---
-# 对《卡斯评估》中有关为青少年性别焦虑提供性别肯定医疗服务的循证批判
-
 **McNamara et al. An Evidence-Based Critique of “The Cass Review” on Gender-affirming Care for Adolescent Gender Dysphoria. https://law.yale.edu/sites/default/files/documents/integrity-project_cass-response.pdf**
 
 ***

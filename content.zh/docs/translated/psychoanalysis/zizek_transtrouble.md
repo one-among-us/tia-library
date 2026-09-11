@@ -1,9 +1,6 @@
 ---
 title: 齐泽克的跨/性别麻烦
 ---
-
-# 齐泽克的跨/性别麻烦
-
 **Che, Gossett. “Žižek’s Trans/Gender Trouble.” *Los Angeles Review of Books*, 13 Sept. 2016, https://lareviewofbooks.org/article/zizeks-transgender-trouble.**
 
 ***

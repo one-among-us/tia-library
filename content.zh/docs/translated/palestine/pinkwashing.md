@@ -1,9 +1,7 @@
 ---
 title: 粉红清洗
+heading: 粉红清洗（Pinkwashing）
 ---
-
-# 粉红清洗（Pinkwashing）
-
 **Decolonize Palestine. Pinkwashing | Decolonize Palestine. 4 Apr. 2021, https://decolonizepalestine.com/rainbow-washing/pinkwashing/.**
 
 ***

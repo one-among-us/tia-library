@@ -1,7 +1,6 @@
 ---
 title: 当自我进行性行为：关于跨性/别性意识（Trans Sexuality）的现象学能交给我们什么关于性取向的启示
 ---
-
 **Bettcher, T.M. (2014). When Selves Have Sex: What the Phenomenology of Trans Sexuality Can Teach About Sexual Orientation. *Journal of Homosexuality*, 61(5), pp.605–620. [doi.org/10.1080/00918369.2014.865472](http://doi.org/10.1080/00918369.2014.865472).**
 
 ***

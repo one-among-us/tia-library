@@ -1,8 +1,6 @@
 ---
 title: 从 TERF 到性别批判：一个反映情况的系谱？
 ---
-
-# 从 TERF 到性别批判：一个反映情况的系谱？
 **Claire Thurlow. “From TERF to Gender Critical: A Telling Genealogy?” *Sexualities*, 2022-09-30.**
 
 ***

@@ -1,9 +1,7 @@
 ---
 title: 超越二元论：性别酷儿作为批判性性别种类
+heading: 超越二元论：性别酷儿（genderqueer）作为批判性性别种类
 ---
-
-# 超越二元论：性别酷儿（genderqueer）作为批判性性别种类
-
 **Dembroff, Robin. “Beyond Binary: Genderqueer as Critical Gender Kind.” Philosophers’ Imprint, vol. 20, no. 9, 2020, pp. 1–23.**
 
 ***

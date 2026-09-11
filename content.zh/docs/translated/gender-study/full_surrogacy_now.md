@@ -1,9 +1,6 @@
 ---
 title: 现在完全代孕
 ---
-
-# 现在完全代孕
-
 **Lewis, Sophie. “Full Surrogacy Now.” e-flux, no. 99, Apr. 2019, https://www.e-flux.com/journal/99/261641/full-surrogacy-now/.**
 
 ***

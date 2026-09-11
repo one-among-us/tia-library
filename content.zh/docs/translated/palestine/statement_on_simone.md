@@ -1,9 +1,7 @@
 ---
 title: 关于巴勒斯坦解放和近期事件的立场声明
+heading: 跨儿学术小组 Trans in Academia! × One Among Us 关于巴勒斯坦解放和近期事件的立场声明
 ---
-
-# 跨儿学术小组 Trans in Academia! × One Among Us 关于巴勒斯坦解放和近期事件的立场声明
-
 2024年6月12日凌晨，荷兰警方以「企图谋杀（Attempted Manslaughter）」罪，将跨性别活动人士 Simone 从家中逮捕。逮捕时，警方切断了 Simone 和外界的一切联系，使她无法与家人和朋友联络。此前，Simone 曾于5月8日参与抗议，反对阿姆斯特丹大学（Amsterdam University）和阿姆斯特丹自由大学（Vrije University Amsterdam）与以色列军队进行不透明合作，被防暴警察殴打至昏厥，并留下多处伤口。
 
 警方逮捕 Simone 后，非法没收了她的手机和 iPad，并强迫她告知警方自己设备的密码。听证会上，检察官撤销了「企图谋杀」的指控，否认强迫查看她的电子设备，改为指控她犯下了「公共暴力罪」（违反荷兰刑法第 141 条）。法院准予 Simone 获保释，条件是不参加任何抗议或犯罪活动。Simone 现在已安全地回到家中。[^1] [^2] [^3]

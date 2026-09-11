@@ -1,8 +1,6 @@
 ---
 title: 什么是性别认同？
 ---
-# 什么是性别认同？
-
 **Jenkins, Katharine. “Toward an Account of Gender Identity.” _Ergo, an Open Access Journal of Philosophy_, vol. 5, no. 20201214, Sept. 2018. DOI.org (Crossref), https://doi.org/10.3998/ergo.12405314.0005.027.**
 
 ***
